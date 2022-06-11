@@ -287,9 +287,9 @@ li {
   transition: background var(--animation-transition);
 }
 /* Модальное окно */
-.hero.overlay {
+/* .hero.overlay {
   position: relative;
-}
+} */
 .backdrop {
   position: fixed;
   left: 0;
@@ -311,7 +311,7 @@ li {
   transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
-  background: var(--white-bgc);
+  background-color: var(--white-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -431,12 +431,14 @@ li {
 }
 .service-list {
   display: flex;
+  /* justify-content: space-evenly; */
 }
 .service-item + .service-item {
   margin-left: 30px;
 }
 .service-card {
   position: relative;
+  /* z-index: -1; */
 }
 .position-servise-text {
   position: absolute;
