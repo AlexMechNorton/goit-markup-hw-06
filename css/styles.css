@@ -299,6 +299,7 @@ li {
   height: 100%;
   transition: opacity var(--animation-transition), visibility var(--animation-transition);
   background: var(--backdrop-bgc);
+  z-index: 5;
 }
 .is-hidden {
   visibility: hidden;
