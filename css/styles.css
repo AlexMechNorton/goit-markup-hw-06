@@ -66,6 +66,10 @@ a {
 li {
   list-style: none;
 }
+input,
+textarea {
+  outline: none;
+}
 .title-section {
   font-weight: 700;
   font-size: 36px;
@@ -491,7 +495,7 @@ li {
 .input-form-order {
   display: block;
   padding-left: 42px;
-  outline: none;
+  /* outline: none; */
 }
 
 .input-form-order:focus {
