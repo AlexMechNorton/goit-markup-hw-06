@@ -26,9 +26,14 @@
   --fsocial-icon-color: #ffffff;
   --fsocial-link-hover: #2196f3;
   --text-color-white: #ffffff;
+  --social-link-fill: #ffffff;
 
   --backdrop-bgc: rgba(0, 0, 0, 0.2);
   --white-bgc: #ffffff;
+  --blue-bgc: #2196f3;
+
+  --form-order-focus-fill: #2196f3;
+  --border-form-color: #2196f3;
 
   --card-set-gap: 30px;
 
@@ -73,6 +78,8 @@ li {
   cursor: pointer;
   border-color: transparent;
   border-radius: 4px;
+  color: var(--button-text-color);
+  background-color: var(--blue-bgc);
 }
 .container {
   width: 1200px;
@@ -167,7 +174,6 @@ li {
 .nav-link:hover,
 .nav-link:focus {
   color: var(--hover-cont-link);
-  /* transition: color var(--animation-transition); */
 }
 .item {
   position: relative;
@@ -201,7 +207,6 @@ li {
 .conn-link:hover,
 .conn-link:focus {
   color: var(--hover-cont-link);
-  /* transition: color var(--animation-transition); */
 }
 .i-email,
 .i-smart {
@@ -238,12 +243,10 @@ li {
 .footer-contacts:hover,
 .footer-contacts:focus {
   color: var(--hover-cont-link);
-  /* transition: color var(--animation-transition); */
 }
 .address-color:hover,
 .address-color:focus {
   color: var(--hover-cont-link);
-  /* transition: color var(--animation-transition); */
 }
 .primary-fsection {
   min-width: 231px;
@@ -285,59 +288,278 @@ li {
 .fsocial-link:hover,
 .fsocial-link:focus {
   background: var(--fsocial-link-hover);
-  /* transition: background var(--animation-transition); */
 }
-/* Модальное окно */
-/* .hero.overlay {
-  position: relative;
-} */
+
+/* Footer Форма подписки */
+/* Footer Форма подписки */
+.container-subscription {
+  margin-left: 93px;
+}
+.form-title {
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--text-color-white);
+}
+.footer-form {
+  display: flex;
+}
+.footer-email-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  /* identical to box height, or 125% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  padding-left: 16px;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+}
+.footer-btn-subscrib {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  min-width: 200px;
+}
+.icon-subscribe {
+  margin-left: 10px;
+  fill: var(--social-link-fill);
+}
+.form-title {
+  margin-bottom: 20px;
+
+  text-transform: uppercase;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--text-color-white);
+}
+.footer-form {
+  display: flex;
+}
+.footer-email-input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+
+  /* identical to box height, or 125% */
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  width: 358px;
+  padding-left: 16px;
+
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+  border-radius: 4px;
+}
+.footer-btn-subscrib {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-left: 12px;
+  min-width: 200px;
+}
+.icon-subscribe {
+  margin-left: 10px;
+  fill: var(--fsocial-icon-color);
+}
+/* МОДАЛЬНОЕ ОКНО "Заказать услуги"*/
 .backdrop {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+
   transition: opacity var(--animation-transition), visibility var(--animation-transition);
-  background: var(--backdrop-bgc);
-  z-index: 5;
+
+  background-color: var(--backdrop-bgc);
 }
-.is-hidden {
-  visibility: hidden;
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
-.modal {
+.modal-order {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
   background-color: var(--white-bgc);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-.closes {
+.btn-close-modal {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
+  padding: 6px;
+  min-width: 30px;
+
+  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background: transparent;
-  cursor: pointer;
+  background-color: var(--white-bgc);
+  fill: #000000;
+
+  transition: fill var(--animation-transition);
 }
-.modal-close {
-  height: 11px;
-  width: 11px;
+.btn-close-modal:hover,
+.btn-close-modal:focus {
+  fill: var(--form-order-focus-fill);
+}
+
+/* Форма в модальном окне для Заказа услуг */
+.form-modal-order {
+  display: flex;
+  flex-direction: column;
+}
+.title-form {
+  margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: var(--primary-letter-spacing);
+  color: var(--title-text-color);
+}
+/* Коробки input */
+.comment-box {
+  margin-bottom: 20px;
+}
+
+/* SVG иконки в форме */
+.form-field {
+  position: relative;
+  margin-bottom: 10px;
+}
+.svg-form {
+  position: absolute;
+  top: 52%;
+  left: 12px;
+  transform: translateY(-50%);
+
+  transition: fill var(--animation-transition);
+}
+/* Кастомизация input */
+.input-form-order {
+  padding-top: 11px;
+  padding-right: 12px;
+  padding-bottom: 11px;
+  padding-left: 12px;
+
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border var(--animation-transition);
+}
+.input-form-order:not(:last-child) {
+  padding-left: 42px;
+}
+/* Стилизация для lable */
+.name-input-order {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.input-form-order {
+  display: block;
+  padding-left: 42px;
+}
+
+.input-form-order:focus {
+  border: 1px solid #2196f3;
+}
+.input-form-order:focus ~ .svg-form {
+  fill: var(--form-order-focus-fill);
+}
+/* Checkbox с принятием рассылки и соглашения */
+.text-checkbox-order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: var(--primary-letter-spacing);
+}
+.checkbox-policy {
+  appearance: none;
+  position: absolute;
+}
+.svg-checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 4px;
+  margin-right: 7px;
+
+  transition: border-color var(--animation-transition), background-color var(--animation-transition),
+    background-image var(--animation-transition);
+}
+.checkbox-policy:checked + .svg-checkbox {
+  border-color: transparent;
+  background-color: var(--blue-bgc);
+  background-image: url(../images/icon-check.svg);
+  background-size: contain;
+  background-origin: border-box;
+}
+.checkbox-policy:focus + .svg-checkbox {
+  border-color: var(--blue-bgc);
+}
+.link-policy {
+  text-decoration: underline;
+  color: var(--hover-cont-link);
+}
+
+/* Кнопка заказа в модальном окне */
+.btn-modal-form-order {
+  width: 200px;
+  padding-top: 10px;
+  padding-right: 55px;
+  padding-bottom: 10px;
+  padding-left: 55px;
+  margin-right: auto;
+  margin-left: auto;
+
+  transition: background-color var(--animation-transition);
+}
+.btn-modal-form-order:hover,
+.btn-modal-form-order:focus {
+  background-color: #188ce8;
 }
 
 /* Стили отдельных страниц */
+
 /* Секция страницы WebStudio */
 /* Секция hero с заказом услуг */
 .hero {
