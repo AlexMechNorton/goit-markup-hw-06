@@ -491,6 +491,7 @@ li {
 .input-form-order {
   display: block;
   padding-left: 42px;
+  outline: none;
 }
 
 .input-form-order:focus {
@@ -499,6 +500,7 @@ li {
 .input-form-order:focus ~ .svg-form {
   fill: var(--form-order-focus-fill);
 }
+
 /* Checkbox с принятием рассылки и соглашения */
 .text-checkbox-order {
   display: flex;
