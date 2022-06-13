@@ -488,7 +488,7 @@ textarea {
 /* Стилизация для lable */
 .name-input-order {
   display: block;
-  align-self: start;
+  text-align: start;
   margin-bottom: 4px;
 
   font-weight: 400;
