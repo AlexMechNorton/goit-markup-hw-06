@@ -341,7 +341,7 @@ textarea {
 }
 .icon-subscribe {
   margin-left: 10px;
-  fill: var(--social-link-fill);
+  fill: var(--fsocial-link-fill);
 }
 
 /* МОДАЛЬНОЕ ОКНО "Заказать услуги"*/
